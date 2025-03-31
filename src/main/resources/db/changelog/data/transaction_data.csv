@@ -1,0 +1,15 @@
+id,account_name,value_date,currency,transaction_amount,transaction_type,transaction_narrative,account_number
+1,SGSavings726,2025-03-30,USD,14327.41,CREDIT,account_credited,585309209
+2,AUSavings933,2025-02-28,USD,19876.23,CREDIT,account_credited,791066619
+3,AUCurrent433,2025-01-30,USD,7893.44,DEBIT,account_debited,321143048
+4,SGSavings842,2022-12-30,USD,6543.65,CREDIT,account_credited,347786244
+5,AUCurrent754,2023-01-29,INR,9873.12,DEBIT,account_debited,680168913
+6,AUCurrent374,2021-01-30,INR,6891.87,CREDIT,account_credited,136056165
+7,AUCurrent591,2020-08-21,INR,0876.32,DEBIT,account_debited,453963528
+8,SGSavings726,2025-03-31,USD,4327.41,CREDIT,account_credited,585309209
+9,AUSavings933,2025-02-27,USD,9876.23,CREDIT,account_credited,791066619
+10,AUCurrent433,2025-01-29,USD,7893.44,DEBIT,account_debited,321143048
+11,SGSavings842,2022-12-28,USD,6543.65,CREDIT,account_credited,347786244
+12,AUCurrent754,2023-01-22,INR,9873.12,DEBIT,account_debited,680168913
+13,AUCurrent374,2021-01-31,INR,6891.87,CREDIT,account_credited,136056165
+14,AUCurrent591,2020-08-22,INR,876.32,DEBIT,account_debited,453963528

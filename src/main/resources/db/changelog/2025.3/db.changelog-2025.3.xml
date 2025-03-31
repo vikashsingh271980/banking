@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+		http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet author="vikash.singh" id="2025.3.1">
+        <sql>
+            CREATE TABLE IF NOT EXISTS account (
+            account_number BIGINT PRIMARY KEY,
+            account_name VARCHAR(255),
+            account_type VARCHAR(255),
+            balance_date TIMESTAMP,
+            currency varchar(10),
+            opening_available_balance numeric
+            );
+
+            CREATE TABLE IF NOT EXISTS transaction (
+            id BIGINT PRIMARY KEY,
+            account_name VARCHAR(255),
+            value_date TIMESTAMP,
+            currency VARCHAR(10),
+            transaction_amount numeric,
+            transaction_type VARCHAR,
+            transaction_narrative VARCHAR(255),
+            account_number BIGINT,
+            FOREIGN KEY (account_number) REFERENCES account(account_number)
+            );
+        </sql>
+    </changeSet>
+    <changeSet author="vikash.singh" id="2025.3.2">
+        <loadData file="db/changelog/data/account_data.csv" tableName="account"/>
+    </changeSet>
+    <changeSet author="vikash.singh" id="2025.3.3">
+        <loadData file="db/changelog/data/transaction_data.csv" tableName="transaction"/>
+    </changeSet>
+</databaseChangeLog>
